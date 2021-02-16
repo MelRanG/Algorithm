@@ -1,3 +1,4 @@
+#최소공배수
 from collections import deque
 from math import gcd
 n = int(input())

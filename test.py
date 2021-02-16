@@ -1,15 +1,11 @@
-import sys
-n = int(sys.stdin.readline())
+n, k = map(int, input().split())
+q = [i for i in range(1, n + 1)]
+answer = []
+i = k - 1
 
-result = [0] * 100001
-for i in range(n):
-    a = int(sys.stdin.readline())
-    result[a] += 1
-m = 0
-index = 0
-print("-----------")
-for i in range(len(result)):
-    if result[i] > m:
-        m = max(m, result[i])
-        index = i
-print(index)
+while q:
+    if i >= len(q):
+        i %= len(q)
+    answer.append(q.pop(i))
+    i += k - 1
+print('<' + ', '.join(map(str, answer)) + '>')

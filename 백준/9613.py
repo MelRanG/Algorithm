@@ -1,3 +1,4 @@
+#gcd 합
 from itertools import combinations
 
 def gcd(a, b):

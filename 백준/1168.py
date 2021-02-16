@@ -4,12 +4,11 @@ from collections import deque
 
 n, k = map(int, sys.stdin.readline().split())
 q = deque([i for i in range(1, n+1)])
-
 answer = []
-x = k - 1
 
 while q:
-    q.rotate(-x)
+    q.rotate(-k+1)
     answer.append(str(q.popleft()))
 
-print('<' + ', '.join(answer) + '>')
+sys.stdout.write('<' + ', '.join(answer) + '>')
+
