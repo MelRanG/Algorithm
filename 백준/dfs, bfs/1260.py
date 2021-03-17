@@ -27,10 +27,10 @@ def bfs(v, graph, visited):
         s = q.popleft()
         print(s, end=' ')
         for i in graph[s]:
-            if visited[i]:              
-                visited[i] = False
+            if not visited[i]:              
+                visited[i] = True
                 q.append(i)
 
 dfs(v, graph, visited)
-print()
+print(visited)
 bfs(v, graph, visited)
