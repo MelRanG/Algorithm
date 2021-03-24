@@ -11,7 +11,6 @@ while True:
         mc = 1
     
     if ec == e and sc == s and mc == m:
-        print(ec, sc, mc)
         break
     ec += 1
     sc += 1
