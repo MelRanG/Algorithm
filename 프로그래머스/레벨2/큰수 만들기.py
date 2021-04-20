@@ -1,6 +1,5 @@
 def solution(number, k):
     n = ""
-    print(number[0])
     count = 0
     number_length = len(number)
     visited = [False] * number_length
